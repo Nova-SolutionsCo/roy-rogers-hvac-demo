@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roy Rogers Heating & Air — Indianapolis HVAC Experts</title>
+    <meta name="description" content="Licensed, insured HVAC in Indianapolis. HVAC repair, installation, maintenance, emergency heating/cooling. Free estimates. Call 317-809-5628">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root { --primary: #2563eb; --primary-dark: #1d4ed8; --cta: #f97316; --cta-dark: #ea580c; --text: #222222; --bg-white: #FFFFFF; --bg-light: #F7F7F7; --gray: #6b7280; --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: var(--text); background-color: var(--bg-white); }
+        .sticky-mobile-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: var(--bg-white); box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15); z-index: 9999; padding: 0.75rem 1rem; }
+        .sticky-mobile-content { display: flex; justify-content: space-between; align-items: center; max-width: 600px; margin: 0 auto; }
+        .sticky-phone { display: flex; align-items: center; gap: 0.5rem; color: var(--text); text-decoration: none; font-weight: 600; }
+        .sticky-phone i { color: var(--cta); }
+        .sticky-quote { background: var(--cta); color: var(--bg-white); padding: 0.625rem 1.25rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; font-size: 0.9375rem; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; background: var(--bg-white); z-index: 1000; box-shadow: var(--shadow); }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+        .nav-logo i { color: var(--cta); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; }
+        .nav-phone { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: var(--text); text-decoration: none; }
+        .nav-phone i { color: var(--cta); }
+        .hero { position: relative; min-height: 90vh; display: flex; align-items: center; justify-content: center; background: url('https://images.unsplash.com/photo-1631545806609-48cae9ff9d6c?w=1920&q=80') center/cover no-repeat; padding: 120px 2rem 80px; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 100%); }
+        .hero-content { position: relative; z-index: 1; text-align: center; max-width: 800px; }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; color: var(--bg-white); margin-bottom: 1rem; line-height: 1.1; }
+        .hero-trust { display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem 1.5rem; margin-bottom: 1.5rem; padding: 0.75rem 1.5rem; background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px); border-radius: 0.5rem; }
+        .hero-trust-item { display: flex; align-items: center; gap: 0.5rem; color: var(--bg-white); font-weight: 600; font-size: 1rem; }
+        .hero-trust-item i { color: var(--cta); }
+        .hero-subtext { font-size: 1.25rem; color: #e5e5e5; margin-bottom: 2rem; }
+        .hero-cta-wrapper { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+        .btn-primary { background: var(--cta); color: var(--bg-white); padding: 1.25rem 3rem; border-radius: 0.5rem; text-decoration: none; font-weight: 700; font-size: 1.25rem; transition: all 0.3s; display: inline-block; }
+        .btn-primary:hover { background: var(--cta-dark); transform: translateY(-2px); }
+        .hero-serving { color: #d1d5db; font-size: 0.9375rem; }
+        .services { padding: 5rem 2rem; background: var(--bg-light); }
+        .section-title { text-align: center; margin-bottom: 3rem; }
+        .section-title h2 { font-size: 2.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.5rem; }
+        .section-title p { color: var(--gray); font-size: 1.125rem; }
+        .services-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .service-card { background: var(--bg-white); border: 2px solid transparent; border-radius: 1rem; padding: 2rem; text-align: center; transition: all 0.3s; box-shadow: var(--shadow); }
+        .service-card:hover { transform: translateY(-5px); border-color: var(--cta); }
+        .service-icon { width: 70px; height: 70px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.25rem; font-size: 1.75rem; color: var(--bg-white); }
+        .service-card h3 { font-size: 1.375rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+        .service-card .benefit { color: var(--gray); font-size: 1rem; font-weight: 500; }
+        .benefits { padding: 4rem 2rem; background: var(--bg-white); }
+        .benefits-grid { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; text-align: center; }
+        .benefit-item { padding: 1rem; }
+        .benefit-icon { width: 60px; height: 60px; background: var(--bg-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; color: var(--primary); }
+        .benefit-item h4 { font-size: 1.125rem; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+        .benefit-item p { color: var(--gray); font-size: 0.9375rem; }
+        .contact { padding: 5rem 2rem; background: var(--primary); }
+        .contact-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .contact-form-wrapper { background: var(--bg-white); border-radius: 1rem; padding: 2.5rem; }
+        .contact-form h3 { font-size: 1.75rem; font-weight: 700; color: var(--text); margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid #e5e7eb; border-radius: 0.5rem; font-size: 1rem; font-family: inherit; }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+        .btn-submit { width: 100%; background: var(--cta); color: var(--bg-white); padding: 1rem; border: none; border-radius: 0.5rem; font-size: 1.125rem; font-weight: 700; cursor: pointer; }
+        .contact-info h3 { font-size: 1.75rem; font-weight: 700; color: var(--bg-white); margin-bottom: 1.5rem; }
+        .contact-details { margin-bottom: 2rem; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; color: rgba(255, 255, 255, 0.9); }
+        .contact-item i { color: var(--cta); font-size: 1.25rem; width: 24px; }
+        .map-container { width: 100%; height: 280px; border-radius: 1rem; overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .footer { background: #111827; padding: 2rem; text-align: center; color: #9ca3af; }
+        .footer p { margin-bottom: 0.5rem; }
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .sticky-mobile-bar { display: block; }
+            .hero { padding: 100px 1.5rem 60px; min-height: auto; }
+            .hero h1 { font-size: 2rem; }
+            .btn-primary { width: 100%; text-align: center; }
+            .services { padding: 3rem 1.5rem; }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><i class="fas fa-temperature-high"></i> Roy Rogers Heating & Air</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:+13178095628" class="nav-phone"><i class="fas fa-phone"></i> 317-809-5628</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Indianapolis' Trusted HVAC Experts</h1>
+            <div class="hero-trust">
+                <div class="hero-trust-item"><i class="fas fa-check-circle"></i> Licensed</div>
+                <div class="hero-trust-item"><i class="fas fa-shield-alt"></i> Insured</div>
+                <div class="hero-trust-item"><i class="fas fa-bolt"></i> 24/7 Emergency</div>
+                <div class="hero-trust-item"><i class="fas fa-star"></i> Free Estimates</div>
+            </div>
+            <p class="hero-subtext">Professional heating & cooling repair, installation & maintenance.</p>
+            <div class="hero-cta-wrapper">
+                <a href="#contact" class="btn-primary">SCHEDULE SERVICE</a>
+                <p class="hero-serving">Serving Indianapolis and surrounding areas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-check-circle"></i></div>
+                <h4>Licensed & Insured</h4>
+                <p>Full protection for your home</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+                <h4>24/7 Emergency</h4>
+                <p>We're here when you need us</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-tools"></i></div>
+                <h4>Expert Technicians</h4>
+                <p> trained professionals</p>
+            </div>
+            <div class="benefit-item">
+                <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                <h4>Free Quotes</h4>
+                <p>No obligation estimates</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Professional HVAC solutions for your home</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                <h3>HVAC Repair</h3>
+                <p class="benefit">— fast, reliable repairs</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-cog"></i></div>
+                <h3>Installation</h3>
+                <p class="benefit">— new system installs</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-clipboard-check"></i></div>
+                <h3>Maintenance</h3>
+                <p class="benefit">— keep systems running</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-fire"></i></div>
+                <h3>Emergency Heating</h3>
+                <p class="benefit">— 24/7 availability</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-form-wrapper">
+                <form class="contact-form" action="https://formspree.io/f/xpwzgvry" method="POST">
+                    <h3>SCHEDULE SERVICE</h3>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your HVAC needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">SCHEDULE SERVICE</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <div class="contact-details">
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>317-809-5628</span></div>
+                    <div class="contact-item"><i class="fas fa-map-marker-alt"></i><span>Indianapolis, IN</span></div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://maps.google.com/maps?q=Indianapolis+IN&output=embed" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Roy Rogers Heating & Air. All rights reserved.</p>
+        <p>Licensed & Insured</p>
+    </footer>
+
+    <div class="sticky-mobile-bar">
+        <div class="sticky-mobile-content">
+            <a href="tel:+13178095628" class="sticky-phone"><i class="fas fa-phone"></i> 317-809-5628</a>
+            <a href="#contact" class="sticky NOW</a>
+        </div>
+-quote">CALL    </div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+            });
+        });
+    </script>
+</body>
+</html>
